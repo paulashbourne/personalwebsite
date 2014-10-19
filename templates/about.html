@@ -1,0 +1,167 @@
+{% extends "base.html %}
+
+{% block page_content %}
+<h1>About me</h1>
+<p>As an engineer, I believe that the best way to learn more about something is to study lots of graphs and charts. So, here's a little about me:</p>
+<div style="width:50%;float:left;">
+    <h2>Figure 1 - Age vs. Time</h2>
+    <canvas id="AgeChart" width="500px" height="300px"></canvas>
+    <div style="width:100%;height:30px;"></div>
+    <h2>Figure 3 - Time Spent Staring at Screens</h2>
+    <canvas id="ScreenChart" width="500px" height="300px"></canvas>
+    <br/>
+    <p style="font-size:16px;">
+    <a style="color:#F7464A">■</a>No screens&nbsp;
+    <a style="color:#E2EAE9">■</a>One screen&nbsp;
+    <a style="color:#D4CCC5">■</a>Two screens&nbsp;
+    <a style="color:#949FB1">■</a>Three screens&nbsp;
+    </p>
+</div>
+<div style="width:50%;float:left;">
+    <h2>Figure 2 - Lines of Code vs. Time</h2>
+    <canvas id="LinesOfCodeChart" width="500px" height="300px"></canvas>
+    <div style="width:100%;height:30px;"></div>
+    <h2>Figure 4 - Use of Graphs vs. Time</h2>
+    <canvas id="GraphUseChart" width="500px" height="300px"></canvas>
+</div>
+<div style="width:100%;height:0;clear:both;"></div>
+<br/>
+<h2>It's always important to analyze test data</h2>
+<h3>1A Term (Mechatronics Engineering, University of Waterloo):</h3>
+<ul>
+    <li>Linear Algebra for Engineering (MATH 115) - Final Grade: 100%</li>
+    <li>Calculus 1 for Engineering (MATH 116) - Final Grade: 95%</li>
+    <li>Digital Computation (GENE 121) - Final Grade: 94%</li>
+    <li>Chemistry for Engineers (CHE 102) - Final Grade: 95%</li>
+    <li>Mechatronics Engineering (MTE 100) - Final Grade: 88%</li>
+    <li>Weighted Average: 93.8%</li>
+</ul>
+<h2>Here's some feedback from the system users</h2>
+<p>"Paul is a high achiever, creative, innovative, and motivated. You can trust Paul to get the job done! His intelligence and drive allow him to accomplish any task he is given. His interpersonal skills are excellent. I would like to express my strongest recommendation." –Anne Leroux, P.Eng, B.A.Sc., M.A.Sc (President, ESCTT Inc.)</p>
+<br/>
+<p style="color:#333333;font-weight:bold;">Looking for more information? Check out my <a href="/static/files/PaulAshbourne-Resume.pdf" target="_blank">resume</a>.</p>
+<script type='text/javascript'>
+    var AgeCtx = document.getElementById("AgeChart").getContext("2d");
+    var GraphUseCtx = document.getElementById("GraphUseChart").getContext("2d");
+    var LinesOfCodeCtx = document.getElementById("LinesOfCodeChart").getContext("2d");
+    var ScreenCtx = document.getElementById("ScreenChart").getContext("2d");
+    var AgeData = {
+        labels: ["", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005",
+            "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014"],
+        datasets: [
+            {
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+            }
+        ]
+    };
+    var GraphUseData = {
+        labels: ["", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005",
+            "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014"],
+        datasets: [
+            {
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [0, 0, 2, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361]
+            }
+        ]
+    };
+    var LinesOfCodeData = {
+        labels: ["2008", "2009", "2010", "2011", "2012", "2013", "2014"],
+        datasets: [
+            {
+                fillColor: "#F7464A",
+                strokeColor: "#FF0000",
+                data: [5, 800, 2000, 3000, 5000, 12000, 20000]
+            }
+        ]
+    };
+    var ScreenData = [
+	{
+		value: 10,
+		color:"#F7464A"
+	},
+	{
+		value : 30,
+		color : "#E2EAE9"
+	},
+	{
+		value : 20,
+		color : "#D4CCC5"
+	},
+	{
+		value : 40,
+		color : "#949FB1"
+	}
+
+];
+    var options = {
+        //Boolean - If we show the scale above the chart data			
+        scaleOverlay: false,
+        //Boolean - If we want to override with a hard coded scale
+        scaleOverride: false,
+        //** Required if scaleOverride is true **
+        //Number - The number of steps in a hard coded scale
+        scaleSteps: null,
+        //Number - The value jump in the hard coded scale
+        scaleStepWidth: null,
+        //Number - The scale starting value
+        scaleStartValue: null,
+        //String - Colour of the scale line	
+        scaleLineColor: "rgba(0,0,0,.1)",
+        //Number - Pixel width of the scale line	
+        scaleLineWidth: 1,
+        //Boolean - Whether to show labels on the scale	
+        scaleShowLabels: false,
+        //Interpolated JS string - can access value
+        scaleLabel: "<%=value%>",
+        //String - Scale label font declaration for the scale label
+        scaleFontFamily: "'Arial'",
+        //Number - Scale label font size in pixels	
+        scaleFontSize: 12,
+        //String - Scale label font weight style	
+        scaleFontStyle: "normal",
+        //String - Scale label font colour	
+        scaleFontColor: "#666",
+        ///Boolean - Whether grid lines are shown across the chart
+        scaleShowGridLines: true,
+        //String - Colour of the grid lines
+        scaleGridLineColor: "rgba(0,0,0,.05)",
+        //Number - Width of the grid lines
+        scaleGridLineWidth: 1,
+        //Boolean - Whether the line is curved between points
+        bezierCurve: false,
+        //Boolean - Whether to show a dot for each point
+        pointDot: false,
+        //Number - Radius of each point dot in pixels
+        pointDotRadius: 3,
+        //Number - Pixel width of point dot stroke
+        pointDotStrokeWidth: 1,
+        //Boolean - Whether to show a stroke for datasets
+        datasetStroke: true,
+        //Number - Pixel width of dataset stroke
+        datasetStrokeWidth: 2,
+        //Boolean - Whether to fill the dataset with a colour
+        datasetFill: true,
+        //Boolean - Whether to animate the chart
+        animation: true,
+        //Number - Number of animation steps
+        animationSteps: 60,
+        //String - Animation easing effect
+        animationEasing: "easeOutQuart",
+        //Function - Fires when the animation is complete
+        onAnimationComplete: null
+
+    };
+
+    new Chart(AgeCtx).Line(AgeData, options);
+    new Chart(GraphUseCtx).Line(GraphUseData, options);
+    new Chart(LinesOfCodeCtx).Bar(LinesOfCodeData, options);
+    new Chart(ScreenCtx).Doughnut(ScreenData, options);
+</script>
+{% end %}

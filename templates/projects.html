@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1>Projects</h1>
+<p>Here is a short list of some of the cool projects that I have worked on.</p>
+<div class="project-container">
+    <h2>Health Care Patient Database</h2>
+    <p>
+        Developed an application and database to store health care records for thousands of palliative care patients in the Greater Toronto Area. Independently built the system from the ground-up to replace an existing Microsoft Access application that suffered from poor performance and excessive complexity. Extracted all data from original database and transferred to new database while maintaining data integrity. Currently holds over 100,000 records. Set up VPN Server for secure access. Uses MySQL and PHP backend.
+        <br/>
+        [MySQL, PHP, VB.NET, HTML+CSS, JavaScript+jQuery]
+        <br/><br/>
+        Developed for ESCTT Inc. during employment as Software Engineer.
+    </p>
+</div>
+<div class="project-container">
+    <h2>RiskMP Risk Management Software</h2>
+    <img src="/static/img/RMP-Logo.png" style="width:226px;height:123px;"/>
+    <p>
+        A fully-featured risk management web application that provides project managers
+        with tools to analyze the impact of risks that may impact projects and create
+        mitigation plans. Engineered the database, all application logic and the user interface.
+        Data model allows users to grant specific permissions to other users to enable
+        collaboration and project sharing. Includes automatic recurring billing system. Developed an extension for Microsoft Project
+        that allows users to synchronize their projects. Beta testing conducted by project
+        management professionals has yielded excellent feedback. <br/>
+        [MySQL, PHP, VB.NET, HTML+CSS, JavaScript+jQuery]
+        <br/><br/>
+        Developed for ESCTT Inc. during employment as Software Engineer. - <a href="https://riskmp.com/">Visit Site</a>
+    </p>
+</div>
+<div class="project-container">
+    <h2>Financial Management Application</h2>
+    <p>Built a web application that provides financial advisors and
+        investment professionals with tools to conduct in-depth analysis of client
+        portfolios and track performance in compliance with CRM2 standards. Developed data model that allows for analysis
+        of multiple portfolios across various clients. Early feedback from financial
+        professionals has been extremely positive. <br/>[MySQL, PHP, Python, HTML+CSS, JavaScript+jQuery]
+        <br/><br/>
+        Developed for ESCTT Inc. during employment as Software Engineer.
+    </p>
+</div>
+<div class="project-container">
+    <h2>Remote Desktop Application</h2>
+    <img src="/static/img/RemoteDesktop.png" style="width:355px;height:200px;"/>
+    <p>Coded in Java, this program consists of both client and server applications.
+        When deployed, the software allows a user to connect to a remote computer
+        and view the display while controlling the mouse and keyboard inputs. Only
+        the core functionality was developed; the user interface is minimal and there
+        are no additional features. Uses threading to detect pixel changes in different
+        areas of the display.<br/> [Java, Threading]
+    </p>
+</div>
+<div class="project-container">
+    <h2>Live Television Display Application</h2>
+    <img src="/static/img/TVDisplay.png" style="width:355px;height:200px;"/>
+    <p>Developed as my final assignment for Grade 12 Computer Science, this application
+        accesses RSS feeds to display updated weather and news reports. Also displays
+        a slideshow of /static/img in a user-selected folder. Fully-customizable. Currently in use on
+        all television displays in Aurora High School. <br/>[Java]
+    </p>
+</div>
+<div class="project-container">
+    <h2>Sudoku Solver Application</h2>
+    <img src="/static/img/SudokuSolver.png" style="width:367px;height:421px;"/>
+    <p>Developed an application that can solve any Sudoku puzzle in the blink of an eye. Uses a modified version of the backtracking algorithm for optimal performance. <br/>[Java] - <a href="files/SudokuSolver.jar">Download</a>
+    </p>
+</div>
+<div class="project-container">
+    <h2>Cribbage</h2>
+    <img src="/static/img/Cribbage.png" style="width:400px;height:262px;"/>
+    <p>
+        Desktop version of the card game Cribbage. Uses statistics-based AI to determine each play <br/>[VB.NET]
+    </p>
+</div>
+
+<div class="project-container">
+    <h2>Tetris</h2>
+    <img src="/static/img/Tetris.png" style="width:246px;height:215px;"/>
+    <p>An implementation of the classic computer game, Tetris. Includes visually-appealing graphical interface and
+        music. Contains over 50 levels of increasing difficulty. Originally coded in VB.NET, later revisited in Java. <br/>[VB.NET, Java]
+    </p>
+</div>
+<div class="project-container">
+    <h2>Othello</h2>
+    <img src="/static/img/Othello.png" style="width:400px;height:280px;"/>
+    <p>
+        A desktop implementation of the board game Othello. <br/>[Java] - <a href="files/Othello.jar">Download</a>
+    </p>
+</div>
+<div class="project-container">
+    <h2>Iron Man Suit</h2>
+    <img src="/static/img/Iron-Man.jpg" style="width:177px;height:323px;"/>
+    <p>
+        ...some day
+    </p>
+</div>
+{% end %}
