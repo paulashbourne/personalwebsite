@@ -1,4 +1,4 @@
-{% extends "base.html %}
+{% extends "base.html" %}
 
 {% block page_content %}
 <h1>About me</h1>
@@ -26,6 +26,7 @@
 </div>
 <div style="width:100%;height:0;clear:both;"></div>
 <br/>
+<!--
 <h2>It's always important to analyze test data</h2>
 <h3>1A Term (Mechatronics Engineering, University of Waterloo):</h3>
 <ul>
@@ -36,9 +37,12 @@
     <li>Mechatronics Engineering (MTE 100) - Final Grade: 88%</li>
     <li>Weighted Average: 93.8%</li>
 </ul>
+-->
 <h2>Here's some feedback from the system users</h2>
-<p>"Paul is a high achiever, creative, innovative, and motivated. You can trust Paul to get the job done! His intelligence and drive allow him to accomplish any task he is given. His interpersonal skills are excellent. I would like to express my strongest recommendation." –Anne Leroux, P.Eng, B.A.Sc., M.A.Sc (President, ESCTT Inc.)</p>
-<br/>
+<p>"Paul is a high achiever, creative, innovative, and motivated. You can trust Paul to get the job done! His intelligence and drive allow him to accomplish any task he is given. His interpersonal skills are excellent. I would like to express my strongest recommendation." –Anne Leroux (President, ESCTT Inc.)</p>
+<p>
+"Paul went above and beyond my expectations for someone of his experience level. He continually amazed me with his speed and the urgency at which he develops. He accomplished a lot this term and should be very proud of what he did. I considered him an integral part of my team while he was at Wish." –Josh Kuntz (Head of Platform Engineering, Wish)
+</p>
 <p style="color:#333333;font-weight:bold;">Looking for more information? Check out my <a href="/static/files/PaulAshbourne-Resume.pdf" target="_blank">resume</a>.</p>
 <script type='text/javascript'>
     var AgeCtx = document.getElementById("AgeChart").getContext("2d");
@@ -47,37 +51,37 @@
     var ScreenCtx = document.getElementById("ScreenChart").getContext("2d");
     var AgeData = {
         labels: ["", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005",
-            "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014"],
+            "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
         datasets: [
             {
                 fillColor: "rgba(151,187,205,0.5)",
                 strokeColor: "rgba(151,187,205,1)",
                 pointColor: "rgba(151,187,205,1)",
                 pointStrokeColor: "#fff",
-                data: [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+                data: [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
             }
         ]
     };
     var GraphUseData = {
         labels: ["", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005",
-            "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014"],
+            "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
         datasets: [
             {
                 fillColor: "rgba(151,187,205,0.5)",
                 strokeColor: "rgba(151,187,205,1)",
                 pointColor: "rgba(151,187,205,1)",
                 pointStrokeColor: "#fff",
-                data: [0, 0, 2, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361]
+                data: [0, 0, 2, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400]
             }
         ]
     };
     var LinesOfCodeData = {
-        labels: ["2008", "2009", "2010", "2011", "2012", "2013", "2014"],
+        labels: ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
         datasets: [
             {
                 fillColor: "#F7464A",
                 strokeColor: "#FF0000",
-                data: [5, 800, 2000, 3000, 5000, 12000, 20000]
+                data: [5, 800, 2000, 3000, 5000, 12000, 20000, 26000]
             }
         ]
     };
