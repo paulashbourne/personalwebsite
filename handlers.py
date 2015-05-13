@@ -16,6 +16,10 @@ class ContactPageHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("templates/contact.html")
 
+class PasswordPageHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render("templates/password.html")
+
 class ErrorPageHandler(tornado.web.RequestHandler):
     def get(self):
         self.write("Error")

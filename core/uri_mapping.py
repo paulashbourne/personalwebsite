@@ -6,6 +6,7 @@ URI_MAPPING = [
     URLSpec(r'/about', h.AboutPageHandler),
     URLSpec(r'/projects', h.ProjectsPageHandler),
     URLSpec(r'/contact', h.ContactPageHandler),
+    URLSpec(r'/password', h.PasswordPageHandler),
     URLSpec(r'/static/(.*)', StaticFileHandler, {'path': 'static/'}),
     URLSpec(r'.*', h.ErrorPageHandler),
 ]
