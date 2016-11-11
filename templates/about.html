@@ -18,8 +18,8 @@
     </p>
 </div>
 <div style="width:50%;float:left;">
-    <h2>Figure 2 - Lines of Code vs. Time</h2>
-    <canvas id="LinesOfCodeChart" width="500px" height="300px"></canvas>
+    <h2>Figure 2 - Commits vs. Time</h2>
+    <canvas id="CommitsChart" width="500px" height="300px"></canvas>
     <div style="width:100%;height:30px;"></div>
     <h2>Figure 4 - Use of Graphs vs. Time</h2>
     <canvas id="GraphUseChart" width="500px" height="300px"></canvas>
@@ -47,7 +47,7 @@ strongest recommendation."
 <script type='text/javascript'>
     var AgeCtx = document.getElementById("AgeChart").getContext("2d");
     var GraphUseCtx = document.getElementById("GraphUseChart").getContext("2d");
-    var LinesOfCodeCtx = document.getElementById("LinesOfCodeChart").getContext("2d");
+    var CommitsCtx = document.getElementById("CommitsChart").getContext("2d");
     var ScreenCtx = document.getElementById("ScreenChart").getContext("2d");
     var AgeData = {
         labels: ["", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005",
@@ -75,7 +75,7 @@ strongest recommendation."
             }
         ]
     };
-    var LinesOfCodeData = {
+    var CommitsData = {
         labels: ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
         datasets: [
             {
@@ -165,7 +165,7 @@ strongest recommendation."
 
     new Chart(AgeCtx).Line(AgeData, options);
     new Chart(GraphUseCtx).Line(GraphUseData, options);
-    new Chart(LinesOfCodeCtx).Bar(LinesOfCodeData, options);
+    new Chart(CommitsCtx).Bar(CommitsData, options);
     new Chart(ScreenCtx).Doughnut(ScreenData, options);
 </script>
 {% end %}
